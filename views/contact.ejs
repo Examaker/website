@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <title>Examaker</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/"><img src="./assets/logo.png" alt="Examker Logo"></a> 
+        <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/exammain">Devoirs</a></li>
+            <li><a href="/Tutoriels">Tutoriels</a></li>
+            <li><a href="/Contact">Contact</a></li>
+            <li><a href="/Apropos">A Propos</a></li> 
+        </ul>
+        <div class="login">
+            <a href="/signup"><button class="signup">S'inscrire</button></a> 
+            <a href="/login"><button>Se connecter</button></a>
+        </div>
+        <div class="user hidden">
+            <img src="/assets/user.png" alt="User Icon" id="user-icon" onclick="togglemenu()">
+        </div>
+    </div>            
+    <div class="wrap-toggle" id="sub-menu">
+        <a href="/settings" class="sub-menu-link" >
+            <img src="/assets/settings.png" >
+            <p>paramètres du compte</p>
+        </a>
+
+        <a href="/logout" class="sub-menu-link">
+            <img src="/assets/logout.png" >
+            <p>se déconnecter</p>
+        </a>
+
+    </div>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+
+            <div class="contact-left-title">
+                <input type="hidden" name="access_key" value="81032e9b-3160-460d-b841-239b7626c160">
+
+                 <h2> Contactez-Nous </h2>
+                 <hr>
+            </div>
+<input type="text" name="name" placeholder="Votre nom et Prénom" class="contact-inputs" required>
+<input type="email" name="email" placeholder="Votre e-mail" class="contact-inputs" required>
+<input type="tel" name="tel" placeholder="Votre numéro téléphone" class="contact-inputs" required>
+<textarea name="message" placeholder="Votre message ici " class="contact-inputs" required></textarea>
+<button type="submit">Envoyez<img src="assets/icone.png" alt=""></button>
+</form>
+  <div class="contact-right">
+    <img src="assets/contact.gif" alt="">
+  </div>
+  </div>
+</body>
+<script src="script2.js"></script>
+<script src="script.js"></script>

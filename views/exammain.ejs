@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Examaker</title>
+  <style>
+    .modal {
+      display: none; /* Initial display set to none */
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="/"><img src="/assets/logo.png" alt="Examker Logo"></a>
+    <ul>
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/exammain">Devoirs</a></li>
+      <li><a href="/Tutoriels">Tutoriels</a></li>
+      <li><a href="/Contact">Contact</a></li>
+      <li><a href="/Apropos">A Propos</a></li>
+    </ul>
+    <div class="payment">
+      <a href="/payment"><button class="paymentbutton">Recharger </button></a>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="examai">
+      <form class="user-input" method="post" action="/">
+        <div class="form-field">
+          <label for="niveauScolaire">Niveau Scolaire:</label>
+          <select name="niveauScolaire" id="niveau-scolaire" class="user-text">
+            <option value="sixieme annee">Sixième année</option>
+            <option value="cinquième année">cinquième année</option>
+            <option value="quatrième année">quatrième année</option>
+            <option value="troisième année ">troisième année </option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="discipline">Discipline:</label>
+          <select name="discipline" id="discipline" class="user-text">
+            <option value="lecture compréhension">Lecture compréhension</option>
+            <option value="Langue">Langue</option>
+            <option value="Production écrite">Production écrite</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="moduleApprentissage">Module d'apprentissage:</label>
+          <select name="moduleApprentissage" id="module-apprentissage" class="user-text">
+            <option value="module d'apprentissage n1">Module d'apprentissage n 1</option>
+            <option value="module d'apprentissage n2">Module d'apprentissage n 2</option>
+            <option value="module d'apprentissage n3">Module d'apprentissage n 3</option>
+            <option value="module d'apprentissage n4">Module d'apprentissage n 4</option>
+            <option value="module d'apprentissage n5">Module d'apprentissage n 5</option>
+            <option value="module d'apprentissage n6">Module d'apprentissage n 6</option>
+            <option value="module d'apprentissage n7">Module d'apprentissage n 7</option>
+            <option value="module d'apprentissage n8">Module d'apprentissage n 8</option>
+          </select>
+        </div>
+       
+
+        <button class="generate-btn" id="generate-btn">Générer</button>
+      </form>
+    </div>
+
+    <div class="container" id="container">
+      <% if (fileReady) { %>
+        <p>Voici votre examen. Vous pouvez le télécharger en <a href="/download" target="_blank">cliquant ici </a></p>
+      <% } else { %>
+        <p>Bonjour, je suis Examaker !</p>
+      <% } %>
+    </div>
+  </div>
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <p>Pour créer un devoir, merci de se connecter</p>
+      <a href="/login">Se connecter</a>
+    </div>
+  </div>
+
+</body>
+<script>
+async function checkAuthStatus() {
+  try {
+    const response = await fetch('/check', {
+      method: 'GET',
+      credentials: 'include',
+    
+    });
+    const data = await response.json();
+    console.log(data);
+
+    const modal = document.getElementById('authModal');
+    if (data.authenticated) {
+      modal.style.display = 'none';
+    } else {
+      modal.style.display = 'block';
+    }
+  } catch (error) {
+    console.error('Error checking authentication status:', error);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', checkAuthStatus);
+
+
+
+
+
+</script>
+<script src="script2.js"></script>
+<script src="script.js"></script>
+
+
+</html>

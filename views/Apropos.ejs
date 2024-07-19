@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Examaker</title>
+</head>
+<style>
+
+</style>
+<body>
+    <div class="navbar">
+        <a href="/"><img src="/assets/logo.png" alt="Examker Logo"></a> 
+        <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/exammain">Devoirs</a></li>
+            <li><a href="/Tutoriels">Tutoriels</a></li>
+            <li><a href="/Contact">Contact</a></li>
+            <li><a href="/Apropos">A Propos</a></li> 
+        </ul>
+        <div class="login">
+            <a href="/signup"><button class="signup">S'inscrire</button></a> 
+            <a href="/login"><button>Se connecter</button></a>
+        </div>
+        <div class="user hidden">
+            <img src="/assets/user.png" alt="User Icon" id="user-icon" onclick="togglemenu()">
+        </div>
+    </div>            
+    <div class="wrap-toggle" id="sub-menu">
+        <a href="/settings" class="sub-menu-link" >
+            <img src="/assets/settings.png" >
+            <p>paramètres du compte</p>
+        </a>
+
+        <a href="/logout" class="sub-menu-link">
+            <img src="/assets/logout.png" >
+            <p>se déconnecter</p>
+        </a>
+
+    </div>
+
+    <div class="pagecontaint">
+        <div class="aproposContainer">
+            <h1>Qui sommes-nous ?</h1>
+           <div class="containerphoto">
+
+            <div class="about-text">
+                <p>Nous sommes Khalil Mhalhel et Montassar Dkhili, deux étudiants passionnés d'informatique de 22 ans à l'Institut Supérieur des Études Appliquées en Humanités de Mahdia. Notre parcours académique, enrichi par une profonde affection pour la programmation et les technologies, nous a menés à la création d'Examaker. Cette plateforme innovante est conçue pour assister les nouveaux enseignants tunisiens dans la préparation d'examens de langue française qui répondent aux normes éducatives exigeantes. Grâce à l'intégration d'une intelligence artificielle formée spécifiquement pour générer des examens de qualité, Examaker offre une solution rapide et efficace, produisant des documents prêts à imprimer en un temps record. Animés par un esprit d'inclusion et une vision à long terme, nous envisageons de développer Examaker pour couvrir diverses disciplines telles que l'arabe, l'anglais, les mathématiques et plus encore, transformant ainsi notre plateforme en un pilier central de l'éducation tunisienne.</p>
+            </div>
+            <div class="photos">
+                <img src="assets/photo.jpg" alt="">
+            </div>
+            
+           </div>
+        </div>
+    </div>
+
+</body>
+<script src="script2.js"></script>
+<script src="script.js"></script>

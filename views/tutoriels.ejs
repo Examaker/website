@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Examaker</title>
+</head>
+<style>
+</style>
+<body>
+    <div class="navbar">
+        <a href="/"><img src="/assets/logo.png" alt="Examker Logo"></a> 
+        <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/exammain">Devoirs</a></li>
+            <li><a href="/Tutoriels">Tutoriels</a></li>
+            <li><a href="/Contact">Contact</a></li>
+            <li><a href="/Apropos">A Propos</a></li> 
+        </ul>
+        <div class="login">
+          <a href="/signup"><button class="signup">S'inscrire</button></a> 
+          <a href="/login"><button>Se connecter</button></a>
+      </div>
+      <div class="user hidden">
+          <img src="/assets/user.png" alt="User Icon" id="user-icon" onclick="togglemenu()">
+      </div>
+  </div>            
+  <div class="wrap-toggle" id="sub-menu">
+      <a href="/settings" class="sub-menu-link" >
+          <img src="/assets/settings.png" >
+          <p>paramètres du compte</p>
+      </a>
+
+      <a href="/logout" class="sub-menu-link">
+          <img src="/assets/logout.png" >
+          <p>se déconnecter</p>
+      </a>
+
+  </div>
+    
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+    <title>Tutoriel Plateforme Examaker</title>
+    <style>
+      .iframe-container {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
+      }
+      h1 {
+        color: red; 
+        text-shadow: 0px 0px 8px rgba(255, 0, 0, 0.7);
+        margin-bottom: 20px; 
+        font-size: 50px;
+      }
+    </style>
+    </head>
+    <body>
+    <div class="iframe-container">
+      <h1>Si vous avez besoin d'un tutoriel</h1> 
+      <iframe width="851" height="480" src="https://www.youtube.com/embed/HsUWFsKyMi0" title="Tutoriel Plateforme Examaker" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    </body>
+    <script src="script2.js"></script>
+    <script src="script.js"></script>
+
+    </html>
+    
+

@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+ 
+body{
+    background: linear-gradient(to bottom right  , lightskyblue 20% , white 110%);
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 80px;
+    padding: 0 40px;
+}
+ .navbar img{
+    object-fit: contain;
+    width: 200px ;
+    height: 100px;
+ }
+ .navbar ul  {
+   display: flex;
+
+   
+ }
+
+ .navbar ul li{
+    list-style: none;
+    display: flex;
+    align-items: center; 
+    width: 140px;
+    padding: 10px 0px 10px 40px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li:hover a{
+    color: #615858;
+    
+}
+
+.navbar ul li:last-child a{
+    margin-left: 0;
+}
+
+.navbar .login button{
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.navbar .login button.signup{
+    background-color: #ae3f3f;
+    color: #fff;
+    border-radius: 4px;
+    margin-right: 14px;
+}
+
+
+ header{
+    padding: 0 80px;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .left{
+    width: 700px;
+}
+
+header .left h1{
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 80px;
+}
+
+header .left h1 span{
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: #ae3f3f;
+
+}
+
+header .left p{
+    margin: 40px 0;
+    color: #060404;
+    font-size: large;
+}
+
+header .left a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ae3f3f;
+    width: 250px;
+    padding: 8px;
+    border-radius: 60px;
+}
+
+header .left a img{
+    background-color: #ffffff00;
+    width: 30px;
+    height: 30px;
+    border-radius: 40%;
+}
+
+header .left a span{
+    color: #f8f1f1;
+    margin-left: 15px;
+    margin-bottom: 3px;
+    font-size: 20px;
+    font-weight: 200px;
+    
+}
+
+
+header img{
+    width: 600px;
+}
+
+
+.generate-btn{
+    background-color: #d14040;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 225px;
+    margin-top: 10px;
+}
+.generate-btn:hover{
+    background-color: #8d1919;
+}
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+    .contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+    .contact-left-title h2{
+        font-weight: 600;
+        color: #d14040;
+        font-size: 25px;
+        margin-bottom: 5px;
+        animation: glowing 1.5s infinite alternate;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #d14040;
+    border-radius: 10px;
+}
+
+    .contact-inputs{
+            width: 400px;
+            height: 50px;
+            border: none;
+            outline: none;
+            padding-left: 25px;
+            font-weight: 500;
+            color: #666;
+            border-radius: 50px;
+            
+}
+    .contact-left textarea{
+                height: 140px;
+                padding-top: 15px;
+                border-radius: 20px;
+              
+}
+.contact-inputs:focus {
+    border: 2px solid #d14040;
+}
+
+.contact-inputs::placeholder{
+    color: #d14040;
+}
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #4220ff, #ff1b45);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out; /* Transition pour un effet doux */
+}
+
+.contact-left button:hover {
+    box-shadow: 0 0 8px 4px #4169E1; /* Couleur bleue pour l'ombre */
+}
+
+
+
+.contact-left button img{
+    height: 15px;
+}
+.contact-right img{
+    width: 500px;
+    position: relative; 
+    margin-top: -30px;  
+}
+@media(max-width:800px) {
+    .contact-inputs{
+        width: 80vw;
+    }
+.contact-right{
+    display: none;
+}
+}
+.contact-left {
+    position: relative; 
+    margin-top: -50px;   
+}
+
+@keyframes glowing {
+    from {
+        text-shadow: 0 0 2px rgb(68, 0, 255);
+    }
+    to {
+        text-shadow: 0 0 20px rgb(255, 255, 255);
+    }}
+
+
+    .hidden {
+        display: none; 
+       }
+   
+   #user-icon{
+       width: 40px;
+       margin-right: 10px;
+   }
+   
+   #user-icon:hover{
+       cursor: pointer;
+       width: 45px;
+   }
+   
+   
+   .wrap-toggle{
+       position: absolute;
+       top: 7%;
+       right: 1%;
+       background-color: #fffdfda8;
+       padding: 20px;
+       margin: 10px;
+       border-radius: 20%;
+      display: none;
+      
+   }
+   .wrap-toggle.open-menu{
+       position: absolute;
+       top: 7%;
+       right: 1%;
+       background-color: #fffdfda8;
+       padding: 20px;
+       margin: 10px;
+       border-radius: 20%;
+      display: flex;
+      flex-direction: column;
+      
+   }
+   
+   
+    .sub-menu-link{
+       display: flex;
+       align-items: center;
+       text-decoration: none ;
+       color: black;
+       margin: 12px 0;
+    }
+    .sub-menu-link p{
+       width: 100%;
+       
+    }
+    .sub-menu-link img{
+       width: 40px;
+       height: 40px;
+       padding: 8px;
+       margin-right: 15px;
+    }
+   
+    
